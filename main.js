@@ -3,13 +3,13 @@ const bodyParser = require("body-parser");
 const app = express();
 const server = require('http').createServer(app);
 
-const io = require('socket.io').listen(server);
+const io = require('socket.io')(server);
 
 const port = 9000;
 
-// server.listen(port, function() {
-//     console.log(`uptalk Proxy server Listen`);
-// });
+server.listen(port, function() {
+    console.log(`uptalk Proxy server Listen`);
+});
 
 io.on('connection', function(socket) {
     console.log('uptalk Proxy server connection');
