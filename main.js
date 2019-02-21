@@ -42,5 +42,5 @@ app.post("/NV/WC1SWN", (req, res) => {
     io.emit('nv_event' , req.body);
 });
 
-app.listen(PORT || 8080);
+//app.listen(PORT || 8080);
 
