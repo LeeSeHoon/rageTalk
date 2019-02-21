@@ -8,7 +8,7 @@ const io = require('socket.io')(server);
 const port = 9000;
 
 server.listen(port, function() {
-    console.log(`uptalk Proxy server Listen port: ${port}`);
+    console.log(`uptalk Proxy server Listen`);
 });
 
 io.on('connection', function(socket) {
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 
 
 
-app.post("/NV", (req, res) => {
+app.post("/NV/WC1SWN", (req, res) => {
     //res.send({hello: "world"});
     console.log(req.body);
     res.sendStatus(200);
@@ -42,5 +42,5 @@ app.post("/NV", (req, res) => {
     io.emit('nv_event' , req.body);
 });
 
-app.listen(PORT || 8080);
+//app.listen(PORT || 8080);
 
