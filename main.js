@@ -1,9 +1,9 @@
 const express = require("express");
-
+const bodyParser = require("body-parser");
 const app = express();
 
 const PORT = process.env.PORT;
-
+app.use(bodyParser.json());
 app.get("/", (req, res) => {
     //res.send({hello: "world"});
     console.log(req.body);
