@@ -34,11 +34,11 @@ app.get("/", (req, res) => {
 
 
 
-app.post("/NV/WC1SWN", (req, res) => {
+app.post("/NV", (req, res) => {
     //res.send({hello: "world"});
     console.log(req.body);
     res.sendStatus(200);
-
+    console.log(req);
     io.emit('nv_event' , req.body);
 });
 
