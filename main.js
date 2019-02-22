@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 
 
 
-app.post("/NV/", (req, res) => {
+app.post("/NV/WC1SWN", (req, res) => {
     //res.send({hello: "world"});
     console.log(req.body);
     res.sendStatus(200);
